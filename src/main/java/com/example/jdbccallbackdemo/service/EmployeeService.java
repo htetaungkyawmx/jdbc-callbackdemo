@@ -13,6 +13,11 @@ public class EmployeeService {
         System.out.println("employee count::"+
                 employeeDao.countEmployee());
         System.out.println("Find AllEmployee:");
-        System.out.println("");
+        employeeDao.findAllEmployee()
+                        .forEach(System.out::println);
+        System.out.println("Average with RowCallBackHandler::");
+        System.out.println(employeeDao.averageWithRowCallBack());
+        System.out.println("Average with ResultSetExtractor:");
+        System.out.println(employeeDao.averageWithResultSetExtractor());
     }
 }
